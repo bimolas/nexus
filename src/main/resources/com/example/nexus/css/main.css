@@ -1,0 +1,2553 @@
+/* Main CSS file for Nexus Browser */
+
+.root {
+    -fx-font-family: "System", "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #ffffff;
+}
+
+/* Browser Root */
+.browser-root {
+    -fx-background-color: #ffffff;
+}
+
+/* Top Container */
+.top-container {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Tab Bar Container */
+.tab-bar-container {
+    -fx-background-color: #e9ecef;
+    -fx-padding: 8 10 0 10;
+    -fx-spacing: 5;
+}
+
+/* Browser Tab Pane */
+.browser-tab-pane {
+    -fx-background-color: transparent;
+    -fx-tab-min-height: 32;
+    -fx-tab-max-height: 32;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.browser-tab-pane > .tab-header-area {
+    -fx-background-color: #e9ecef;
+    -fx-padding: 4 0 0 4;
+}
+
+.browser-tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: #e9ecef;
+}
+
+/* COMPLETELY HIDE the tab overflow menu button (dropdown arrow) */
+.browser-tab-pane .control-buttons-tab {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-width: 0;
+    visibility: hidden;
+}
+
+.browser-tab-pane .control-buttons-tab * {
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+    visibility: hidden;
+}
+
+.browser-tab-pane .tab-down-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+    visibility: hidden;
+}
+
+.browser-tab-pane .tab-down-button .arrow {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-shape: "";
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    visibility: hidden;
+}
+
+/* Tab styling with fixed width and smooth animation */
+.browser-tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-background-color: #dee2e6;
+    -fx-background-radius: 8 8 0 0;
+    -fx-padding: 4 2 4 6;
+    -fx-background-insets: 0 1 0 0;
+    -fx-pref-width: 160;
+    -fx-min-width: 100;
+    -fx-max-width: 200;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-cursor: hand;
+}
+
+.browser-tab-pane > .tab-header-area > .headers-region > .tab:focused {
+    -fx-background-color: #dee2e6;
+    -fx-background-insets: 0 1 0 0;
+}
+
+.browser-tab-pane > .tab-header-area > .headers-region > .tab:selected {
+    -fx-background-color: #ffffff;
+}
+
+.browser-tab-pane > .tab-header-area > .headers-region > .tab:selected:focused {
+    -fx-background-color: #ffffff;
+}
+
+/* Stronger hover effect - darker shade */
+.browser-tab-pane > .tab-header-area > .headers-region > .tab:hover {
+    -fx-background-color: #bcc2c8;
+}
+
+/* Disable hover effect on selected tabs */
+.browser-tab-pane > .tab-header-area > .headers-region > .tab:selected:hover {
+    -fx-background-color: #ffffff;
+}
+
+/* Tab label styling */
+.browser-tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-text-fill: #495057;
+    -fx-font-size: 11px;
+    -fx-text-overrun: ellipsis;
+}
+
+.browser-tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+    -fx-text-fill: #212529;
+}
+
+/* Hide default close button - we use custom one */
+.browser-tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-close-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+    visibility: hidden;
+}
+
+/* Custom tab close button style - gray hover */
+.tab-close-btn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-padding: 2;
+    -fx-cursor: hand;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab-close-btn:hover {
+    -fx-background-color: rgba(108, 117, 125, 0.25);
+}
+
+.tab-close-btn .ikonli-font-icon {
+    -fx-icon-size: 10;
+    -fx-icon-color: #6c757d;
+}
+
+/* New Tab Button - positioned next to tabs */
+.new-tab-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+    -fx-padding: 6 8;
+    -fx-cursor: hand;
+    -fx-min-width: 28;
+    -fx-min-height: 28;
+    -fx-max-width: 28;
+    -fx-max-height: 28;
+}
+
+.new-tab-button:hover {
+    -fx-background-color: #ced4da;
+}
+
+.new-tab-button:pressed {
+    -fx-background-color: #adb5bd;
+}
+
+.new-tab-button .ikonli-font-icon {
+    -fx-icon-size: 16;
+    -fx-icon-color: #495057;
+}
+
+/* Tab bar area styling */
+.tab-bar-area {
+    -fx-background-color: #e9ecef;
+    -fx-padding: 4 8 0 8;
+    -fx-spacing: 0;
+    -fx-alignment: center-left;
+}
+
+/* Toolbar */
+.toolbar {
+    -fx-background-color: #f8f9fa;
+    -fx-spacing: 5;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-padding: 8;
+    -fx-cursor: hand;
+    -fx-min-width: 36;
+    -fx-min-height: 36;
+    -fx-max-width: 36;
+    -fx-max-height: 36;
+}
+
+.nav-button:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.nav-button:pressed {
+    -fx-background-color: #dee2e6;
+}
+
+.nav-button:disabled {
+    -fx-opacity: 0.4;
+}
+
+.nav-button .ikonli-font-icon {
+    -fx-icon-size: 18;
+    -fx-icon-color: #495057;
+}
+
+/* Address Bar Container */
+.address-bar-container {
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 24;
+    -fx-padding: 4 12;
+    -fx-spacing: 8;
+    -fx-alignment: center-left;
+}
+
+.address-bar-container:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #80bdff;
+    -fx-border-radius: 24;
+    -fx-border-width: 2;
+}
+
+/* Security Icon */
+.security-icon {
+    -fx-padding: 0 4 0 0;
+}
+
+.security-icon .ikonli-font-icon {
+    -fx-icon-size: 14;
+    -fx-icon-color: #28a745;
+}
+
+/* Address Bar */
+.address-bar {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 4 0;
+    -fx-font-size: 13px;
+}
+
+.address-bar:focused {
+    -fx-background-color: transparent;
+}
+
+/* Address Bar Button */
+.address-bar-button {
+    -fx-background-color: transparent;
+    -fx-padding: 4;
+    -fx-cursor: hand;
+}
+
+.address-bar-button:hover {
+    -fx-background-color: #dee2e6;
+    -fx-background-radius: 4;
+}
+
+.address-bar-button .ikonli-font-icon {
+    -fx-icon-size: 16;
+    -fx-icon-color: #6c757d;
+}
+
+/* Browser Container */
+.browser-container {
+    -fx-background-color: #ffffff;
+}
+
+/* Status Bar */
+.status-bar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-label {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 11px;
+}
+
+/* ========================================
+   Context Menu Styling
+   ======================================== */
+.context-menu {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 12, 0, 0, 3);
+}
+
+/* Menu Items */
+.context-menu .menu-item {
+    -fx-padding: 8 12;
+    -fx-background-radius: 6;
+    -fx-background-insets: 2;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #f3f4f6;
+}
+
+.context-menu .menu-item:focused {
+    -fx-background-color: #f3f4f6;
+}
+
+.context-menu .menu-item .label {
+    -fx-text-fill: #374151;
+    -fx-font-size: 13px;
+}
+
+.context-menu .menu-item .ikonli-font-icon {
+    -fx-icon-size: 16;
+}
+
+/* Accelerator text (keyboard shortcuts) */
+.context-menu .menu-item .accelerator-text {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 11px;
+}
+
+/* Separator - thin and subtle */
+.context-menu .separator {
+    -fx-padding: 6 8;
+}
+
+.context-menu .separator .line {
+    -fx-border-color: #f0f0f0;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Submenu styling */
+.context-menu .menu {
+    -fx-padding: 8 12;
+    -fx-background-radius: 6;
+    -fx-background-insets: 2;
+}
+
+.context-menu .menu:hover {
+    -fx-background-color: #f3f4f6;
+}
+
+.context-menu .menu .label {
+    -fx-text-fill: #374151;
+    -fx-font-size: 13px;
+}
+
+.context-menu .menu > .arrow {
+    -fx-background-color: #9ca3af;
+    -fx-shape: "M 0 0 L 4 3 L 0 6 Z";
+    -fx-scale-shape: true;
+    -fx-padding: 3;
+}
+
+.context-menu .menu:hover > .arrow {
+    -fx-background-color: #6b7280;
+}
+
+/* CheckMenuItem */
+.context-menu .check-menu-item {
+    -fx-padding: 8 12;
+    -fx-background-radius: 6;
+    -fx-background-insets: 2;
+}
+
+.context-menu .check-menu-item:hover {
+    -fx-background-color: #f3f4f6;
+}
+
+.context-menu .check-menu-item .label {
+    -fx-text-fill: #374151;
+    -fx-font-size: 13px;
+}
+
+.context-menu .check-menu-item > .left-container {
+    -fx-padding: 0 6 0 0;
+}
+
+.context-menu .check-menu-item:selected > .left-container > .check {
+    -fx-background-color: #3b82f6;
+    -fx-padding: 3;
+}
+
+/* Menu accelerator text */
+.context-menu .menu-item .accelerator-text {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11px;
+}
+
+/* Tooltip */
+.tooltip {
+    -fx-background-color: #212529;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 4;
+    -fx-padding: 6 10;
+    -fx-font-size: 12px;
+}
+
+/* Modern thin scrollbar - global style */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+    -fx-pref-height: 10;
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 10;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 10;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #c0c0c0;
+    -fx-background-radius: 5;
+    -fx-background-insets: 2;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #a0a0a0;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #808080;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}
+
+.address-bar:focused {
+    -fx-border-color: #2196f3;
+    -fx-border-width: 2px;
+}
+
+/* Buttons */
+.button {
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 16px;
+}
+
+.button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.button:pressed {
+    -fx-background-color: #d0d0d0;
+}
+
+/* List view */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+.list-cell {
+    -fx-padding: 10px;
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Removed unsupported :last-child selector - handled by list-cell styling in code or default behavior */
+
+.list-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+.list-cell:selected {
+    -fx-background-color: #e3f2fd;
+}
+
+/* Progress bar */
+.progress-bar {
+    -fx-accent: #2196f3;
+}
+
+.progress-bar .track {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 4px;
+}
+
+.progress-bar .bar {
+    -fx-background-radius: 4px;
+}
+
+/* Scroll pane */
+.scroll-pane {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: white;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* Combo box */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #2196f3;
+    -fx-border-width: 2px;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 8px 12px;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #e3f2fd;
+}
+
+/* Text field */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 12px;
+}
+
+.text-field:focused {
+    -fx-border-color: #2196f3;
+    -fx-border-width: 2px;
+}
+
+/* Separator */
+.separator {
+    -fx-background-color: #e0e0e0;
+}
+
+/* Dark theme */
+.root.dark {
+    -fx-background-color: #121212;
+}
+
+.root.dark .toolbar {
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #333;
+}
+
+.root.dark .modern-tab-pane {
+    -fx-background-color: #1e1e1e;
+}
+
+.root.dark .modern-tab-pane .tab-header-area {
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #333;
+}
+
+.root.dark .modern-tab-pane .tab {
+    -fx-background-color: #2a2a2a;
+    -fx-border-color: #333;
+}
+
+.root.dark .modern-tab-pane .tab:selected {
+    -fx-background-color: #121212;
+    -fx-border-color: #333 #333 #121212 #333;
+}
+
+.root.dark .modern-tab-pane .tab .tab-label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.root.dark .modern-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+.root.dark .address-bar {
+    -fx-background-color: #2a2a2a;
+    -fx-border-color: #333;
+    -fx-text-fill: #e0e0e0;
+}
+
+.root.dark .address-bar:focused {
+    -fx-border-color: #2196f3;
+}
+
+.root.dark .address-bar .prompt-text {
+    -fx-text-fill: #888;
+}
+
+.root.dark .list-view {
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #333;
+}
+
+.root.dark .list-cell {
+    -fx-border-color: transparent transparent #333 transparent;
+    -fx-text-fill: #e0e0e0;
+}
+
+.root.dark .list-cell:hover {
+    -fx-background-color: #2a2a2a;
+}
+
+.root.dark .list-cell:selected {
+    -fx-background-color: #1a237e;
+}
+
+.root.dark .scroll-pane {
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #333;
+}
+
+.root.dark .scroll-pane .viewport {
+    -fx-background-color: #1e1e1e;
+}
+
+.root.dark .combo-box {
+    -fx-background-color: #2a2a2a;
+    -fx-border-color: #333;
+    -fx-text-fill: #e0e0e0;
+}
+
+.root.dark .combo-box:focused {
+    -fx-border-color: #2196f3;
+}
+
+.root.dark .combo-box-popup .list-view {
+    -fx-background-color: #2a2a2a;
+    -fx-border-color: #333;
+}
+
+.root.dark .combo-box-popup .list-cell {
+    -fx-text-fill: #e0e0e0;
+}
+
+.root.dark .combo-box-popup .list-cell:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.root.dark .combo-box-popup .list-cell:selected {
+    -fx-background-color: #1a237e;
+}
+
+.root.dark .text-field {
+    -fx-background-color: #2a2a2a;
+    -fx-border-color: #333;
+    -fx-text-fill: #e0e0e0;
+}
+
+.root.dark .text-field:focused {
+    -fx-border-color: #2196f3;
+}
+
+.root.dark .text-field .prompt-text {
+    -fx-text-fill: #888;
+}
+
+.root.dark .separator {
+    -fx-background-color: #333;
+}
+
+/* ==================== History Panel Styles ==================== */
+.history-panel {
+    -fx-background-color: #ffffff;
+}
+
+.history-panel .header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1 0;
+}
+
+.history-panel .title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+}
+
+.history-panel .search-field {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-border-color: transparent;
+    -fx-padding: 10 16;
+    -fx-font-size: 13px;
+}
+
+.history-panel .search-field:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #0d6efd;
+    -fx-border-width: 2;
+}
+
+/* Modern Filter Dropdown */
+.history-panel .filter-combo,
+.filter-dropdown {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-padding: 8 12;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.history-panel .filter-combo:hover,
+.filter-dropdown:hover {
+    -fx-background-color: #e9ecef;
+    -fx-border-color: #ced4da;
+}
+
+.history-panel .filter-combo:focused,
+.filter-dropdown:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #0d6efd;
+    -fx-border-width: 2;
+}
+
+.history-panel .filter-combo .arrow,
+.filter-dropdown .arrow {
+    -fx-background-color: #6c757d;
+    -fx-shape: "M 0 0 L 4 4 L 8 0 Z";
+    -fx-scale-shape: true;
+    -fx-padding: 3 4;
+}
+
+.history-panel .filter-combo .list-cell,
+.filter-dropdown .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #495057;
+    -fx-padding: 8 12;
+}
+
+.history-panel .filter-combo-popup .list-view,
+.combo-box-popup .list-view {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #dee2e6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);
+    -fx-padding: 4;
+}
+
+.history-panel .filter-combo-popup .list-cell,
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+    -fx-padding: 10 14;
+    -fx-font-size: 13px;
+}
+
+.history-panel .filter-combo-popup .list-cell:hover,
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.history-panel .filter-combo-popup .list-cell:selected,
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #e7f1ff;
+    -fx-text-fill: #0d6efd;
+}
+
+.history-panel .history-item {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 12 15;
+}
+
+.history-panel .history-item:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.history-panel .history-item .title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #212529;
+}
+
+.history-panel .history-item .url {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6c757d;
+}
+
+.history-panel .history-item .time {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6c757d;
+}
+
+.history-panel .favicon-container {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 20;
+}
+
+.history-panel .danger-button {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+}
+
+.history-panel .danger-button:hover {
+    -fx-background-color: #c82333;
+}
+
+/* ==================== Bookmark Panel Styles ==================== */
+.bookmark-panel {
+    -fx-background-color: #ffffff;
+}
+
+.bookmark-panel .sidebar {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 15;
+}
+
+.bookmark-panel .sidebar-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.bookmark-panel .sidebar-button {
+    -fx-background-color: transparent;
+    -fx-padding: 10 15;
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+}
+
+.bookmark-panel .sidebar-button:hover {
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 6;
+}
+
+.bookmark-panel .folder-tree {
+    -fx-background-color: transparent;
+}
+
+.bookmark-panel .folder-tree .tree-cell {
+    -fx-padding: 8 10;
+}
+
+.bookmark-panel .folder-tree .tree-cell:selected {
+    -fx-background-color: #e3f2fd;
+    -fx-background-radius: 4;
+}
+
+.bookmark-panel .bookmark-item {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-padding: 12 15;
+}
+
+.bookmark-panel .bookmark-item:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.bookmark-panel .bookmark-item .title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #212529;
+}
+
+.bookmark-panel .bookmark-item .url {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6c757d;
+}
+
+.bookmark-panel .folder-item {
+    -fx-background-color: #fff8e1;
+    -fx-background-radius: 8;
+}
+
+.bookmark-panel .icon-container {
+    -fx-background-radius: 8;
+}
+
+.bookmark-panel .icon-container.folder {
+    -fx-background-color: #fff8e1;
+}
+
+.bookmark-panel .icon-container.bookmark {
+    -fx-background-color: #e3f2fd;
+}
+
+.bookmark-panel .favorite-icon {
+    -fx-icon-color: #ffc107;
+}
+
+.bookmark-panel .primary-button {
+    -fx-background-color: #0d6efd;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+}
+
+.bookmark-panel .primary-button:hover {
+    -fx-background-color: #0b5ed7;
+}
+
+.bookmark-panel .secondary-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+}
+
+.bookmark-panel .secondary-button:hover {
+    -fx-background-color: #5c636a;
+}
+
+/* ==================== Split Pane for Bookmark Panel ==================== */
+.split-pane {
+    -fx-background-color: transparent;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: #e9ecef;
+    -fx-padding: 0 1;
+}
+
+/* ==================== Dialog Styles ==================== */
+.dialog-pane {
+    -fx-background-color: #ffffff;
+}
+
+.dialog-pane > .button-bar > .container {
+    -fx-padding: 15 20;
+}
+
+.dialog-pane .content.label {
+    -fx-padding: 20;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 15 20;
+}
+
+/* ==================== Empty State Styles ==================== */
+.empty-state {
+    -fx-alignment: center;
+    -fx-padding: 50;
+}
+
+.empty-state .icon {
+    -fx-icon-size: 64;
+    -fx-icon-color: #adb5bd;
+}
+
+.empty-state .title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #6c757d;
+}
+
+.empty-state .hint {
+    -fx-font-size: 14px;
+    -fx-text-fill: #adb5bd;
+}
+
+/* ==================== Settings Panel Custom Scrollbar ==================== */
+.settings-panel-scroll {
+    -fx-background-color: #ffffff;
+    -fx-background: #ffffff;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.settings-panel-scroll .viewport {
+    -fx-background-color: #ffffff;
+}
+
+.settings-panel-scroll .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 2 1 2 1;
+    -fx-pref-width: 8;
+}
+
+.settings-panel-scroll .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.settings-panel-scroll .scroll-bar:vertical .track-background {
+    -fx-background-color: transparent;
+}
+
+.settings-panel-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #d0d0d0;
+    -fx-background-radius: 4;
+    -fx-background-insets: 0;
+}
+
+.settings-panel-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #b0b0b0;
+}
+
+.settings-panel-scroll .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #909090;
+}
+
+/* Hide increment and decrement buttons completely */
+.settings-panel-scroll .scroll-bar:vertical .increment-button,
+.settings-panel-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+    -fx-padding: 0;
+    visibility: hidden;
+}
+
+.settings-panel-scroll .scroll-bar:vertical .increment-arrow,
+.settings-panel-scroll .scroll-bar:vertical .decrement-arrow {
+    -fx-shape: "";
+    -fx-background-color: transparent;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-padding: 0;
+    visibility: hidden;
+}
+
+/* Settings Color Picker Styling */
+.color-picker {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+}
+
+.color-picker:hover {
+    -fx-background-color: #e9ecef;
+    -fx-border-color: #ced4da;
+}
+
+.color-picker .color-picker-label {
+    -fx-text-fill: #495057;
+}
+
+.color-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.color-picker .arrow-button .arrow {
+    -fx-background-color: #6c757d;
+}
+
+.color-palette {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #dee2e6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 10, 0, 0, 3);
+    -fx-padding: 8;
+}
+
+.color-palette .color-square {
+    -fx-background-radius: 4;
+}
+
+.custom-color-dialog {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #dee2e6;
+}
+
+/* Settings Slider Styling - Custom slider uses transparent native slider */
+.slider {
+    -fx-background-color: transparent;
+}
+
+.slider .track {
+    -fx-background-color: transparent;
+    -fx-pref-height: 6;
+}
+
+.slider .thumb {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 1;
+    -fx-pref-height: 1;
+}
+
+.slider:focused .thumb {
+    -fx-background-color: transparent;
+}
+
+.slider .axis {
+    -fx-tick-label-fill: transparent;
+}
+
+/* Radio Button Styling for Settings */
+.radio-button {
+    -fx-padding: 4 0;
+}
+
+.radio-button .radio {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+    -fx-border-width: 2;
+    -fx-pref-width: 18;
+    -fx-pref-height: 18;
+}
+
+.radio-button:selected .radio {
+    -fx-border-color: #6366f1;
+    -fx-background-color: #ffffff;
+}
+
+.radio-button:selected .radio .dot {
+    -fx-background-color: #6366f1;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 8;
+    -fx-pref-height: 8;
+}
+
+.radio-button:hover .radio {
+    -fx-border-color: #6366f1;
+}
+
+.radio-button .text {
+    -fx-fill: #212529;
+}
+
+/* Inline-style replacements for Java code (light theme) */
+.notification-box {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+}
+.notification-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.notification-message {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+.card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 14;
+}
+.card .card-header .card-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #212529;
+}
+
+.toggle-row {
+    -fx-border-color: transparent transparent #e9ecef transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10 0 10 0;
+}
+.toggle-row .title-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #212529;
+}
+.toggle-row .desc-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6c757d;
+}
+
+/* Toggle track colors will be handled by inline style property for primaryColor; keep a default */
+.toggle-track-off {
+    -fx-background-color: #adb5bd;
+    -fx-background-radius: 12;
+}
+
+/* Small helpers for dialog buttons */
+.dialog-save-button {
+    -fx-background-color: #0d6efd;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 20;
+}
+
+/* End of added light theme rules */
+
+/* Tab title and tooltip */
+.tab-title {
+    -fx-font-size: 11px;
+}
+
+.tooltip {
+    -fx-font-size: 12px; /* override default tooltip font size */
+}
+
+/* Tab preview popup */
+.tab-preview {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 10, 0, 0, 2);
+}
+
+.preview-title {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+}
+
+.preview-url {
+    -fx-font-size: 10px;
+    -fx-text-fill: #6c757d;
+}
+
+/* Ensure tab close button hover uses CSS rather than inline handlers */
+.tab-close-btn {
+    -fx-background-color: transparent;
+    -fx-padding: 2;
+    -fx-cursor: hand;
+}
+.tab-close-btn:hover {
+    -fx-background-color: rgba(108, 117, 125, 0.25);
+    -fx-background-radius: 50%;
+}
+
+/* Download Manager Panel */
+.download-panel {
+    -fx-background-color: #ffffff;
+    -fx-padding: 8;
+}
+
+.download-panel .download-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+    -fx-padding: 0 12 0 0;
+}
+
+.download-panel .status {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 12px;
+}
+
+.download-panel .progress-bar .bar {
+    -fx-background-color: #0d6efd;
+}
+
+.download-panel .button {
+    -fx-padding: 6 10;
+}
+
+.download-panel .action-button {
+    -fx-background-radius: 6;
+}
+
+/* Popup notification (centered labels) */
+.popup-notification {
+    -fx-background-color: rgba(33,33,33,0.9);
+    -fx-padding: 10 16;
+    -fx-background-radius: 6;
+    -fx-alignment: center;
+}
+
+.popup-notification .popup-label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* Dialog form element classes */
+.dialog-pane.custom-dialog {
+    -fx-background-color: #ffffff;
+}
+.dialog-field {
+    -fx-background-radius: 6;
+    -fx-padding: 8 12;
+}
+.dialog-save-button {
+    -fx-background-color: #0d6efd;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 20;
+}
+
+/* Tab header padding helper */
+.tab-header-padding {
+    -fx-padding: 0 4 0 4;
+}
+
+/* End added rules */
+
+/* Bookmark panel styles */
+.bookmark-panel {
+    -fx-background-color: #ffffff;
+}
+.bookmark-header {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20 20 15 20;
+}
+.bookmark-sidebar {
+    -fx-background-color: #f8f9fa;
+}
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-padding: 10 15;
+    -fx-font-size: 13px;
+    -fx-text-fill: #212529;
+    -fx-alignment: center-left;
+}
+.sidebar-btn:hover {
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 6;
+}
+.bookmark-search-field {
+    -fx-background-radius: 20;
+    -fx-padding: 8 15;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 20;
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #212529;
+}
+.bookmark-panel .bookmark-list-cell {
+    -fx-background-radius: 8;
+    -fx-padding: 12 15;
+    -fx-background-color: #ffffff;
+}
+.bookmark-panel .bookmark-list-cell:hover {
+    -fx-background-color: #f8f9fa;
+}
+.bookmark-panel .icon-container {
+    -fx-background-radius: 8;
+}
+.bookmark-add-btn {
+    -fx-background-color: #0d6efd;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+}
+.bookmark-new-folder-btn {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+}
+.primary-button {
+    -fx-background-color: #0d6efd;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+}
+.secondary-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+}
+.bookmark-back-btn {
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+}
+
+/* Bookmark cell customizations (list cell graphics) */
+.bookmark-panel .bookmark-item {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+}
+.bookmark-panel .bookmark-item:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Downloads dropdown / card styling (light theme) */
+.download-dropdown-root {
+    -fx-padding: 0 !important;
+    -fx-background-color: transparent !important;
+    -fx-border-color: transparent !important;
+    -fx-border-width: 0 !important;
+    -fx-background-insets: 0 !important;
+    -fx-background-radius: 0 !important;
+}
+
+
+.download-dropdown {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+    -fx-border-color: #e6e6e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 20, 0, 0, 8);
+}
+
+.download-dropdown .download-card-row {
+    -fx-background-color: transparent;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 1;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 10;
+}
+
+.download-dropdown-empty {
+    -fx-text-fill: #6b7280;
+    -fx-padding: 12;
+}
+
+.download-dropdown-name {
+    -fx-font-size: 13px;
+    -fx-text-fill: #111827;
+    -fx-font-weight: 500;
+}
+
+.download-dropdown-percent {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b7280;
+}
+
+/* Icon / action buttons in dropdown - clean borderless look but keep hover rounded effect */
+.icon-button, .download-action-button {
+    -fx-background-color: transparent; /* remove default button fill */
+    -fx-border-color: transparent;     /* remove default border */
+    -fx-padding: 6;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+}
+
+/* Specific open/delete helper classes (preserve icons, remove default borders) */
+.icon-button.open, .icon-button.delete,
+.download-action-button.open, .download-action-button.delete {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 6;
+    -fx-background-radius: 8;
+}
+
+/* Hover state: subtle rounded background that matches settings panel style */
+.icon-button:hover, .download-action-button:hover {
+    -fx-background-color: rgba(59,130,246,0.06);
+    -fx-background-radius: 8;
+}
+
+/* Icon color consistent with settings icons */
+.icon-button .ikonli-font-icon,
+.download-action-button .ikonli-font-icon {
+    -fx-icon-size: 14;
+    -fx-icon-color: #374151; /* neutral dark-gray */
+}
+
+/* open/delete icon button colors (light theme) */
+.icon-button.open .ikonli-font-icon {
+    -fx-icon-color: #374151; /* neutral */
+}
+.icon-button.open:hover .ikonli-font-icon {
+    -fx-icon-color: #0d6efd; /* accent on hover */
+}
+.icon-button.delete .ikonli-font-icon {
+    -fx-icon-color: #dc3545; /* danger red */
+}
+.icon-button.delete:hover .ikonli-font-icon {
+    -fx-icon-color: #b02a37;
+}
+
+/* Primary button in dropdown footer */
+.download-dropdown .primary-button {
+    -fx-font-weight: 600;
+}
+
+/* Progress bar modern look */
+.progress-bar.download-progress {
+    -fx-background-color: transparent;
+    -fx-pref-height: 10;
+}
+
+/* Blue inner bar with rounded ends; use a simple solid color to avoid CSS parsing issues */
+.progress-bar.download-progress .bar {
+    -fx-background-color: #2563eb; /* microsoft-blue-ish */
+    -fx-background-radius: 6;
+    -fx-padding: 0.5;
+    -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.12), 6, 0, 0, 2);
+}
+
+.progress-bar.download-progress .track {
+    -fx-background-color: #eef2f7;
+    -fx-background-radius: 6;
+}
+
+/* Small file type icon */
+.file-type-icon {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6b7280;
+}
+
+/* Download manager list styling to match dropdown */
+.download-panel .download-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #111827;
+}
+
+.icon-button.action-icon {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-padding: 6;
+}
+
+.icon-button.action-icon:hover {
+    -fx-background-color: rgba(59,130,246,0.06);
+}
+
+/* small rounded subtle danger button */
+.danger-button .ikonli-font-icon {
+    -fx-icon-color: #ef4444;
+}
+
+/* Footer open downloads button style */
+.download-dropdown .primary-button {
+    -fx-font-weight: 600;
+}
+
+/* Ensure popup root showing class triggers scale/opacity animation */
+.download-dropdown-root.showing {
+    -fx-opacity: 1;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+/* Profile Styles - Light Theme */
+.profile-container {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+.profile-header {
+    -fx-spacing: 15;
+    -fx-padding: 15;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.profile-image {
+    -fx-fit-width: 80;
+    -fx-fit-height: 80;
+    -fx-border-radius: 40;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+.profile-username {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.profile-subtitle {
+    -fx-font-size: 12;
+    -fx-text-fill: #6b7280;
+}
+
+.profile-info-section {
+    -fx-spacing: 10;
+    -fx-padding: 15;
+    -fx-border-color: #f3f4f6;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-color: #fafbfc;
+}
+
+.section-title {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.field-label {
+    -fx-font-size: 12;
+    -fx-text-fill: #4b5563;
+    -fx-font-weight: 500;
+}
+
+.form-field {
+    -fx-padding: 8 12;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-font-size: 13;
+    -fx-text-fill: #1f2937;
+    -fx-background-color: #ffffff;
+}
+
+.form-field:focused {
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 2;
+}
+
+.button-group {
+    -fx-spacing: 10;
+    -fx-padding: 15 0 0 0;
+}
+
+.btn-primary {
+    -fx-padding: 10 20;
+    -fx-font-size: 13;
+    -fx-font-weight: 500;
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #2563eb;
+}
+
+.btn-success {
+    -fx-padding: 10 20;
+    -fx-font-size: 13;
+    -fx-font-weight: 500;
+    -fx-background-color: #10b981;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-success:hover {
+    -fx-background-color: #059669;
+}
+
+.btn-secondary {
+    -fx-padding: 10 20;
+    -fx-font-size: 13;
+    -fx-font-weight: 500;
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: #1f2937;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #d1d5db;
+}
+
+/* ==================== Chrome-Style Profile Chooser ==================== */
+.profile-chooser-root {
+    -fx-background-color: #ffffff;
+}
+
+.chooser-header {
+    -fx-padding: 40 20 20 20;
+}
+
+.chooser-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+}
+
+.chooser-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5f6368;
+    -fx-text-alignment: center;
+}
+
+.accounts-grid {
+    -fx-padding: 20;
+}
+
+/* Profile Tile Card - Chrome Style */
+.profile-tile-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12px;
+    -fx-padding: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 4, 0, 0, 2);
+}
+
+.profile-tile-card:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #c0c4cc;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 12, 0, 0, 4);
+}
+
+.profile-tile-card-logged-out {
+    -fx-opacity: 0.75;
+    -fx-border-color: #dadce0;
+    -fx-border-style: solid;
+}
+
+.profile-tile-card-logged-out:hover {
+    -fx-opacity: 1.0;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #c0c4cc;
+}
+
+.profile-status-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 400;
+    -fx-text-fill: #d93025;
+    -fx-text-alignment: center;
+}
+
+/* Add Profile Card */
+.add-profile-card {
+    -fx-border-style: dashed;
+    -fx-border-color: #dadce0;
+    -fx-background-color: transparent;
+}
+
+.add-profile-card:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #5f6368;
+}
+
+/* Avatar Circle */
+.profile-avatar {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 6, 0, 0, 2);
+}
+
+.avatar-circle {
+    -fx-stroke: rgba(0, 0, 0, 0.08);
+    -fx-stroke-width: 1;
+}
+
+.add-avatar-circle {
+    -fx-stroke: transparent;
+}
+
+.avatar-initials {
+    -fx-font-family: "Google Sans", "Roboto", "Arial", sans-serif;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Profile Name Label */
+.profile-name-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+/* Profile Menu Button */
+.profile-menu-btn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-padding: 4;
+    -fx-cursor: hand;
+    -fx-min-width: 28px;
+    -fx-min-height: 28px;
+    -fx-max-width: 28px;
+    -fx-max-height: 28px;
+}
+
+.profile-menu-btn:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.06);
+}
+
+.profile-menu-btn .ikonli-font-icon {
+    -fx-icon-size: 18;
+    -fx-icon-color: #5f6368;
+}
+
+/* Guest Mode Button */
+.guest-mode-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #5f6368;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #5f6368;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+}
+
+.guest-mode-button:hover {
+    -fx-background-color: rgba(95, 99, 104, 0.04);
+    -fx-border-color: #202124;
+    -fx-text-fill: #202124;
+}
+
+.guest-mode-button .ikonli-font-icon {
+    -fx-icon-size: 16;
+    -fx-icon-color: #5f6368;
+}
+
+.guest-mode-button:hover .ikonli-font-icon {
+    -fx-icon-color: #202124;
+}
+
+/* Startup Checkbox */
+.startup-checkbox {
+    -fx-text-fill: #5f6368;
+    -fx-font-size: 13px;
+}
+
+.startup-checkbox .box {
+    -fx-background-color: white;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 2;
+    -fx-background-radius: 2;
+}
+
+.startup-checkbox:selected .box {
+    -fx-background-color: #1a73e8;
+    -fx-border-color: #1a73e8;
+}
+
+.startup-checkbox .mark {
+    -fx-background-color: white;
+}
+
+.chooser-footer {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* ==================== Modern Minimal Profile Panel ==================== */
+.profile-panel-root {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+/* Profile Info Container (outside card) */
+.profile-info-container {
+    -fx-background-color: transparent;
+}
+
+/* Name outside card (at top) */
+.profile-name-outside {
+    -fx-font-size: 24px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #202124;
+    -fx-max-width: 320;
+    -fx-alignment: center;
+}
+
+/* Email outside card (below name) */
+.profile-email-outside {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5f6368;
+    -fx-max-width: 320;
+    -fx-font-weight: 400;
+    -fx-alignment: center;
+}
+
+/* Profile Card Container */
+.profile-card-container {
+    -fx-background-color: transparent;
+}
+
+/* Avatar Card Solo (just the image, separate from text) */
+.profile-avatar-card-solo {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 16;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 2);
+    -fx-border-color: #e8eaed;
+    -fx-border-width: 1;
+    -fx-border-radius: 16;
+    -fx-cursor: hand;
+}
+
+.profile-avatar-card-solo:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 16, 0, 0, 4);
+    -fx-border-color: #dadce0;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* Legacy styles for backward compatibility */
+.profile-name-top {
+    -fx-font-size: 24px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #202124;
+    -fx-max-width: 320;
+}
+
+.profile-email-top {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5f6368;
+    -fx-max-width: 320;
+    -fx-font-weight: 400;
+}
+
+.profile-avatar-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 16;
+    -fx-padding: 28 24 28 24;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 2);
+    -fx-border-color: #e8eaed;
+    -fx-border-width: 1;
+    -fx-border-radius: 16;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+.profile-avatar-card:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 16, 0, 0, 4);
+    -fx-border-color: #dadce0;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* Profile Avatar Container */
+.profile-avatar-container {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 10, 0, 0, 2);
+}
+
+.avatar-circle-bg {
+    -fx-fill: linear-gradient(to bottom right, #667eea 0%, #764ba2 100%);
+}
+
+.profile-avatar-image {
+    -fx-smooth: true;
+}
+
+/* Username below image (kept for compatibility) */
+.profile-username-below {
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-max-width: 280;
+}
+
+/* Profile Actions Container */
+.profile-actions-container {
+    -fx-padding: 0 32 32 32;
+}
+
+/* Primary Action Button (Sign Out) */
+.profile-action-button {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-padding: 12 32;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.3), 8, 0, 0, 2);
+    -fx-min-width: 200;
+}
+
+.profile-action-button:hover {
+    -fx-background-color: #1765cc;
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.4), 12, 0, 0, 3);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.profile-action-button:pressed {
+    -fx-background-color: #1557b0;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.profile-action-button .ikonli-font-icon {
+    -fx-icon-color: white;
+    -fx-icon-size: 16;
+}
+
+/* Secondary Action Button (Switch Account) */
+.profile-action-button-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1a73e8;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-padding: 12 32;
+    -fx-cursor: hand;
+    -fx-min-width: 200;
+}
+
+.profile-action-button-secondary:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #1a73e8;
+    -fx-text-fill: #1557b0;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.profile-action-button-secondary:pressed {
+    -fx-background-color: #e8f0fe;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.profile-action-button-secondary .ikonli-font-icon {
+    -fx-icon-color: #1a73e8;
+    -fx-icon-size: 16;
+}
+
+.profile-save-btn {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-padding: 9 24;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+
+/* ==================== Profile Chooser Styles ==================== */
+.profile-chooser-root {
+    -fx-background-color: #ffffff;
+}
+
+.chooser-header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 40 20 20 20;
+}
+
+.chooser-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+}
+
+.chooser-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5f6368;
+    -fx-text-alignment: center;
+}
+
+/* Accounts Grid */
+.accounts-grid {
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+/* Profile Tile Card */
+.profile-tile-card {
+    -fx-background-color: white;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 4, 0, 0, 2);
+}
+
+.profile-tile-card:hover {
+    -fx-border-color: #1a73e8;
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.2), 12, 0, 0, 4);
+}
+
+/* Add Profile Card */
+.add-profile-card {
+    -fx-border-style: dashed;
+    -fx-border-color: #5f6368;
+}
+
+.add-profile-card:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #1a73e8;
+    -fx-border-style: solid;
+}
+
+/* Profile Menu Button (3 dots) */
+.profile-menu-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #5f6368;
+    -fx-padding: 4;
+    -fx-cursor: hand;
+    -fx-background-radius: 50%;
+}
+
+.profile-menu-btn:hover {
+    -fx-background-color: #f1f3f4;
+}
+
+.profile-menu-btn .ikonli-font-icon {
+    -fx-icon-size: 20;
+    -fx-icon-color: #5f6368;
+}
+
+/* Profile Avatar in Tile */
+.profile-avatar {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 8, 0, 0, 2);
+}
+
+.avatar-circle {
+    -fx-stroke: white;
+    -fx-stroke-width: 2;
+}
+
+.avatar-initials {
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.add-avatar-circle {
+    -fx-fill: #e8eaed;
+    -fx-stroke: transparent;
+}
+
+/* Profile Name Label */
+.profile-name-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-text-alignment: center;
+}
+
+/* Profile Email Label (in chooser cards) */
+.profile-email-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: 400;
+    -fx-text-fill: #5f6368;
+    -fx-text-alignment: center;
+}
+
+/* Chooser Footer */
+.chooser-footer {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e8eaed;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 20 40 30 40;
+}
+
+.guest-mode-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1a73e8;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 18;
+    -fx-background-radius: 18;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-padding: 10 24;
+    -fx-cursor: hand;
+}
+
+.guest-mode-button:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #1a73e8;
+}
+
+.guest-mode-button .ikonli-font-icon {
+    -fx-icon-color: #1a73e8;
+    -fx-icon-size: 16;
+}
+
+.startup-checkbox {
+    -fx-font-size: 13px;
+    -fx-text-fill: #5f6368;
+}
+
+.startup-checkbox .box {
+    -fx-background-color: white;
+    -fx-border-color: #5f6368;
+    -fx-border-width: 2;
+    -fx-border-radius: 2;
+    -fx-background-radius: 2;
+}
+
+.startup-checkbox:selected .box {
+    -fx-background-color: #1a73e8;
+    -fx-border-color: #1a73e8;
+}
+
+.startup-checkbox:selected .mark {
+    -fx-background-color: white;
+}
+
+.startup-checkbox:hover .box {
+    -fx-border-color: #202124;
+}
+
+.startup-checkbox:selected:hover .box {
+    -fx-background-color: #1765cc;
+    -fx-border-color: #1765cc;
+}
+
+/* ==================== Separate Auth Dialogs (Sign In / Sign Up) ==================== */
+.auth-dialog-root {
+    -fx-background-color: #ffffff;
+}
+
+.auth-header {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e8eaed;
+    -fx-border-width: 0 0 1 0;
+}
+
+.auth-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #202124;
+}
+
+.auth-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5f6368;
+    -fx-font-weight: 400;
+}
+
+.auth-form-container {
+    -fx-background-color: #ffffff;
+}
+
+.auth-field-group {
+    -fx-alignment: center-left;
+}
+
+.auth-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-padding: 0 0 0 2;
+}
+
+.auth-field {
+    -fx-background-color: white;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 14 16;
+    -fx-font-size: 14px;
+    -fx-text-fill: #202124;
+    -fx-pref-width: 350;
+    -fx-max-width: 350;
+}
+
+.auth-field:focused {
+    -fx-border-color: #1a73e8;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.25), 8, 0, 0, 2);
+}
+
+.auth-primary-button {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 14 32;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-pref-width: 350;
+    -fx-max-width: 350;
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.3), 8, 0, 0, 2);
+}
+
+.auth-primary-button:hover {
+    -fx-background-color: #1765cc;
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.4), 12, 0, 0, 3);
+}
+
+.auth-primary-button:pressed {
+    -fx-background-color: #1557b0;
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.2), 4, 0, 0, 1);
+}
+
+.auth-divider {
+    -fx-padding: 10 0;
+}
+
+.auth-divider .separator {
+    -fx-background-color: #e8eaed;
+}
+
+.auth-divider-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #5f6368;
+    -fx-padding: 0 10;
+}
+
+.auth-link-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5f6368;
+}
+
+.auth-link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1a73e8;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-underline: false;
+}
+
+.auth-link-button:hover {
+    -fx-text-fill: #1765cc;
+    -fx-underline: true;
+}
+
+.error-label {
+    -fx-text-fill: #d93025;
+    -fx-font-size: 13px;
+    -fx-padding: 4 0 0 0;
+    -fx-font-weight: 500;
+    -fx-wrap-text: true;
+}
+
+/* ==================== Authentication Forms (Login/Signup) - Legacy Tab-based ==================== */
+.auth-tab-pane {
+    -fx-background-color: #ffffff;
+    -fx-tab-min-height: 40px;
+}
+
+.auth-tab-pane .tab-header-area {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 0;
+}
+
+.auth-tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 12 32;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+.auth-tab-pane .tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #1a73e8;
+    -fx-border-width: 0 0 2 0;
+}
+
+.auth-tab-pane .tab .tab-label {
+    -fx-text-fill: #5f6368;
+}
+
+.auth-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #1a73e8;
+}
+
+.auth-form {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30 40;
+}
+
+.auth-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #5f6368;
+}
+
+.auth-field {
+    -fx-background-color: white;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 12 14;
+    -fx-font-size: 14px;
+    -fx-text-fill: #202124;
+    -fx-pref-width: 380;
+}
+
+.auth-field:focused {
+    -fx-border-color: #1a73e8;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.2), 4, 0, 0, 0);
+}
+
+/* ==================== Signup/Login Form Styles (Legacy) ==================== */
+.signup-form {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+}
+
+.signup-field {
+    -fx-background-color: white;
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 10 12;
+    -fx-font-size: 14px;
+    -fx-text-fill: #202124;
+    -fx-pref-width: 250;
+}
+
+.signup-field:focused {
+    -fx-border-color: #1a73e8;
+    -fx-border-width: 2;
+}
+
+.error-label {
+    -fx-text-fill: #d93025;
+    -fx-font-size: 12px;
+    -fx-padding: 4 0 0 0;
+    -fx-font-weight: 500;
+}
+
+.dialog-pane {
+    -fx-background-color: #ffffff;
+}
+
+.dialog-pane > .header-panel {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e8eaed;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20;
+}
+
+.bookmark-bar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 4 10 4 10;
+}
+
+.bookmark-bar .menu-button {
+    -fx-text-fill: #333333;
+}
+
+/* Bookmark bar buttons */
+.bookmark-bar .bookmark-btn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+
+.bookmark-bar .bookmark-btn:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.bookmark-bar .bookmark-btn-label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 12px;
+    -fx-font-weight: 400;
+}
+
+.bookmark-bar .bookmark-more-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #dee2e6;
+    -fx-text-fill: #666666;
+    -fx-font-size: 11px;
+    -fx-padding: 4 8 4 8;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.bookmark-bar .bookmark-more-btn:hover {
+    -fx-background-color: #e9ecef;
+    -fx-text-fill: #495057;
+}
+
+.bookmark-bar .bookmark-folders-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333;
+}
+
+.bookmark-bar .bookmark-folders-btn:hover {
+    -fx-background-color: #e9ecef;
+}
